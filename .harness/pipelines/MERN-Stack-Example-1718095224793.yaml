@@ -14,11 +14,14 @@ pipeline:
             steps:
               - step:
                   type: Run
-                  name: Echo Welcome Message
+                  name: installing dependance
                   identifier: Echo_Welcome_Message
                   spec:
                     shell: Sh
-                    command: echo "Welcome to HCSC Harness CI"
+                    command: |-
+                      cd server
+                      yarn install;
+                      yarn test;
           platform:
             os: Linux
             arch: Amd64
