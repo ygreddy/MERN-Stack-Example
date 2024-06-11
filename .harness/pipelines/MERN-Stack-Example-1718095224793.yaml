@@ -27,7 +27,7 @@ pipeline:
                   name: BuildAndPushDockerRegistry_1
                   identifier: BuildAndPushDockerRegistry_1
                   spec:
-                    connectorRef: account.harnessImage
+                    connectorRef: harnessdockerconnector
                     repo: ygreddy/ubuntu
                     tags:
                       - latest
