@@ -1,0 +1,35 @@
+pipeline:
+  identifier: Build_MERN_Stack_Example_1718095193930
+  name: Build MERN-Stack-Example
+  orgIdentifier: default
+  projectIdentifier: default_project
+  properties:
+    ci:
+      codebase:
+        build: <+input>
+        connectorRef: githubharnes
+        repoName: MERN-Stack-Example
+  stages:
+    - stage:
+        identifier: build
+        name: build
+        spec:
+          caching:
+            enabled: true
+          cloneCodebase: true
+          execution:
+            steps:
+              - step:
+                  identifier: installdependencies
+                  name: install dependencies
+                  spec:
+                    command: npm install
+                  timeout: ""
+                  type: Run
+          platform:
+            arch: Amd64
+            os: Linux
+          runtime:
+            spec: {}
+            type: Cloud
+        type: CI
