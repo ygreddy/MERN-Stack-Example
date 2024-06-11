@@ -22,6 +22,17 @@ pipeline:
                       cd server
                       yarn install;
                       yarn test;
+              - step:
+                  type: BuildAndPushDockerRegistry
+                  name: BuildAndPushDockerRegistry_1
+                  identifier: BuildAndPushDockerRegistry_1
+                  spec:
+                    connectorRef: account.harnessImage
+                    repo: ygreddy/ubuntu
+                    tags:
+                      - latest
+                    dockerfile: server/Dockerfile
+                    context: server
           platform:
             os: Linux
             arch: Amd64
