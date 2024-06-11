@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_MERN_Stack_Example_1718095193930-push-trigger-input-set
+  identifier: Build_MERN_Stack_Example_1718095193930pushtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: default_project
+  pipeline:
+    identifier: Build_MERN_Stack_Example_1718095193930
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
