@@ -45,4 +45,4 @@ yarn start
 yarn start
 ```
 
-6. At this point you'll have a locally running server and client open in your browser.
+6. At this point you'll have a locally running server and client open in your browser..
